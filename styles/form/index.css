@@ -1,0 +1,7 @@
+main#form-content {
+  background-color: var(--color-shape-body);
+  border-radius: 12px;
+  margin: 20px 20px 20px 0;
+
+  overflow: auto; /* aqui pode ter barra de rolagem */
+}
