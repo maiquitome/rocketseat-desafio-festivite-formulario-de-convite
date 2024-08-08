@@ -29,6 +29,15 @@ select {
   }
 }
 
+input[type="datetime-local"] {
+  color-scheme: dark;
+  &::-webkit-calendar-picker-indicator {
+    /* filter: invert(1); */
+    /* color-scheme: dark; */
+    opacity: 0.8;
+  }
+}
+
 .input-wrapper {
   margin-bottom: 16px;
 }
