@@ -33,11 +33,52 @@
     </aside>
 
     <main id="form-content">
-      <h1>Crie seu convite</h1>
+      <div class="container">
+        <h1>Crie seu convite</h1>
 
-      <form action="">
+        <form action="">
+          <fieldset id="about-event">
+            <legend>
+              <img src="./assets/icons/calendar.svg" alt="ícone de calendário">
+              Sobre o evento
+            </legend>
 
-      </form>
+            <div class="input-wrapper">
+              <label for="event-title">Título</label>
+              <input name="event-title" type="text" id="event-title" placeholder="Nome do evento">
+            </div>
+
+            <div class="flex gap-16">
+              <div class="input-wrapper flex-1">
+                <label for="event-start">Início</label>
+                <input name="event-start" type="datetime-local" id="event-start">
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="event-end">Fim</label>
+                <input name="event-end" type="datetime-local" id="event-end">
+              </div>
+            </div>
+
+            <div class="flex gap-16">
+              <div class="input-wrapper segmented-control flex-1">
+                <label for="event-type">Tipo</label>
+                <div class="radio-wrapper">
+                  <input name="event-type" type="text" id="event-type">
+                </div>
+              </div>
+              <div class="input-wrapper flex-1">
+                <label for="event-local">Local</label>
+                <input name="event-local" type="text" id="event-local" placeholder="Link ou endereço">
+              </div>
+            </div>
+
+            <div class="textarea-wrapper">
+              <label for="event-description">Descrição</label>
+              <textarea name="event-description" id="event-description" rows="5" placeholder="Escreva sobre os detalhes do evento"></textarea>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </main>
   </div>
 </body>
