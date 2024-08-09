@@ -9,6 +9,19 @@ main#form-content {
 
   padding: 80px 130px 80px 130px;
 
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-input-stroke);
+    border-radius: 20px;
+  }
+
   .container {
     max-width: 560px;
     margin-inline: auto;
