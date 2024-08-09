@@ -8,7 +8,7 @@ label {
 input,
 textarea,
 select {
-  display: block;
+  height: 48px;
   width: 100%;
   padding: 13px 16px;
   border-radius: 8px;
