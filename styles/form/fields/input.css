@@ -5,10 +5,13 @@ label {
   display: block;
 }
 
+input {
+  height: 48px;
+}
+
 input,
 textarea,
 select {
-  height: 48px;
   width: 100%;
   padding: 13px 16px;
   border-radius: 8px;
