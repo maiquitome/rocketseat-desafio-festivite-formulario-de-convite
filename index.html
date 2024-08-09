@@ -60,10 +60,19 @@
             </div>
 
             <div class="flex gap-16">
-              <div class="input-wrapper segmented-control flex-1">
+              <div class="input-wrapper flex-1">
                 <label for="event-type">Tipo</label>
-                <div class="radio-wrapper">
-                  <input name="event-type" type="text" id="event-type">
+                <div class="segmented-control radio-wrapper">
+                  <div class="radio-inner">
+                    <img src="./assets/icons/building.svg" alt="ícone de prédio">
+                    <label for="football">Presencial</label>
+                    <input name="event-type" type="radio" id="event-type" checked>
+                  </div>
+                  <div class="radio-inner">
+                    <img src="./assets/icons/video.svg" alt="ícone de vídeo">
+                    <label for="football">Online</label>
+                    <input name="event-type" type="radio" id="event-type">
+                  </div>
                 </div>
               </div>
               <div class="input-wrapper flex-1">

@@ -1,0 +1,60 @@
+.segmented-control {
+  height: 48px;
+  outline: 1px solid var(--color-input-stroke);
+  border-radius: 8px;
+  background-color: var(--color-input-base);
+
+  display: flex;
+  gap: 4px;
+  padding-inline: 4px;
+
+  .radio-inner {
+    margin-block: 4px;
+    padding-top: 12px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 8px;
+
+    position: relative;
+
+    label {
+      font: var(--text-body-sm);
+      color: var(--color-text-body);
+      display: inline-block;
+      line-height: 1;
+    }
+
+    img {
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      filter: invert(65%) sepia(12%) saturate(284%) hue-rotate(160deg)
+        brightness(87%) contrast(85%);
+    }
+    input {
+      all: unset;
+      position: absolute;
+      inset: 0;
+    }
+    &:has(:checked) {
+      background-color: var(--color-shape-button);
+
+      label {
+        color: var(--color-text-heading);
+        font: var(--text-body-sm-semibold);
+        line-height: 1;
+      }
+      img {
+        filter: invert(67%) sepia(56%) saturate(3083%) hue-rotate(184deg)
+          brightness(104%) contrast(101%);
+      }
+    }
+    &:hover {
+      /* outline: 1px solid var(--color-brand-mid); */
+      cursor: pointer;
+    }
+  }
+}
