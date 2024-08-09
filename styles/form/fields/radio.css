@@ -1,5 +1,4 @@
 .segmented-control {
-  height: 48px;
   outline: 1px solid var(--color-input-stroke);
   border-radius: 8px;
   background-color: var(--color-input-base);
@@ -52,9 +51,83 @@
           brightness(104%) contrast(101%);
       }
     }
-    &:hover {
-      /* outline: 1px solid var(--color-brand-mid); */
-      cursor: pointer;
+  }
+}
+
+#personalization {
+  #main-color,
+  #event-theme {
+    label {
+      color: var(--color-text-heading);
+    }
+  }
+
+  .radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .radio-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-shape-button);
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      position: relative;
+      outline: 2px solid var(--color-shape-button);
+      input[type="radio"] {
+        all: unset;
+        position: absolute;
+        inset: 0;
+        &:checked {
+          border-radius: 50%;
+          outline: 2px solid var(--color-brand-light);
+        }
+        &:hover {
+          border: 6px solid var(--color-shape-hover);
+          border-radius: 50px;
+        }
+      }
+      .circle-inner {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+
+        &.blue-color {
+          background-color: var(--color-brand-light);
+        }
+        &.navy-color {
+          background-color: var(--color-accent-navy);
+        }
+        &.purple-color {
+          background-color: var(--color-accent-purple);
+        }
+        &.fuchsia-color {
+          background-color: var(--color-accent-fuchsia);
+        }
+        &.pink-color {
+          background-color: var(--color-accent-pink);
+        }
+        &.red-color {
+          background-color: var(--color-feedback-danger);
+        }
+        &.orange-color {
+          background-color: var(--color-accent-orange);
+        }
+        &.yellow-color {
+          background-color: var(--color-accent-yellow);
+        }
+        &.lime-color {
+          background-color: var(--color-accent-lime);
+        }
+        &.green-color {
+          background-color: var(--color-accent-green);
+        }
+        &.cyan-color {
+          background-color: var(--color-accent-cyan);
+        }
+      }
     }
   }
 }

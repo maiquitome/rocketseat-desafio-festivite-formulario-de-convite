@@ -35,5 +35,6 @@ main#form-content {
 
   fieldset {
     border: none;
+    margin-bottom: 48px;
   }
 }
