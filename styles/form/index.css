@@ -59,7 +59,12 @@ main#form-content {
     }
 
     #style {
-      width: 176px;
+      flex: 1;
+      max-width: 176px;
+    }
+
+    #cover-photo {
+      flex: 2;
     }
   }
 }

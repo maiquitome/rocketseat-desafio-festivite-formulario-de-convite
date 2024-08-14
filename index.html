@@ -36,7 +36,8 @@
       <div class="container">
         <h1>Crie seu convite</h1>
 
-        <form action="">
+        <!-- enctype="multipart/form-data" é necessário quando há um campo do tipo file -->
+        <form method="post" enctype="multipart/form-data">
           <fieldset id="about-event">
             <legend>
               <img src="./assets/icons/calendar.svg" alt="ícone de calendário">
@@ -223,13 +224,35 @@
                 </div>
               </div>
 
-              <div id="cover-photo"></div>
+              <div id="cover-photo">
+                <label for="choose-file">Foto de capa</label>
+                <div class="input-wrapper">
+                  <label id="choose-file-button">
+                    <img src="./assets/icons/upload.svg" alt="ícone de seta apontando pra cima">
+                    Selecionar
+                    <input type="file" name="choose-file" id="choose-file" />
+                  </label>
+                  <span id="file-name">Nenhum arquivo selecionado</span>
+                </div>
+              </div>
             </div>
           </fieldset>
         </form>
       </div>
     </main>
   </div>
+
+  <script>
+    let input = document.getElementById("choose-file");
+    let fileName = document.getElementById("file-name")
+
+    input.addEventListener("change", () => {
+      let file = document.querySelector("input[type=file]").files[0];
+
+      fileName.innerText = file.name;
+      fileName.style.color = "#c8cdd0";
+    })
+  </script>
 </body>
 
 </html>

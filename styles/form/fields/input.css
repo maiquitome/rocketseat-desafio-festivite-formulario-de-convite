@@ -44,3 +44,42 @@ input[type="datetime-local"] {
 .input-wrapper {
   margin-bottom: 16px;
 }
+
+#cover-photo {
+  .input-wrapper {
+    all: unset;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    label#choose-file-button {
+      gap: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 6px;
+      position: relative;
+      width: 119px;
+      height: 40px;
+      background-color: var(--color-shape-button);
+      border-radius: 8px;
+      font: var(--text-body-sm-semibold);
+      color: var(--color-text-heading);
+      padding-block: 4px;
+      &:hover {
+        background-color: var(--color-shape-hover);
+      }
+      input[type="file"] {
+        width: 119px;
+        height: 40px;
+        opacity: 0;
+        position: absolute;
+      }
+    }
+    #file-name {
+      color: var(--color-input-placeholder);
+      font: var(--text-body-md);
+      max-width: 234px;
+    }
+  }
+}
