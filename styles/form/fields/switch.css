@@ -1,0 +1,72 @@
+.switch-wrapper {
+  padding-block: 8px;
+  line-height: 0;
+  display: flex;
+  .dark-or-light-text {
+    margin: 6.5px 0 6.5px 12px;
+    color: var(--color-text-heading);
+    font: var(--text-body-sm);
+    display: inline-block;
+  }
+  &:has(input:checked) .dark-or-light-text::after {
+    content: "Claro";
+  }
+  &:has(input:not(:checked)) .dark-or-light-text::after {
+    content: "Escuro";
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    input {
+      /* all: unset; */
+      opacity: 0;
+      width: 0;
+      height: 0;
+      &:checked + .slider {
+        background-color: var(--color-brand-light);
+      }
+      &:focus + .slider {
+        box-shadow: 0 0 1px var(--color-brand-light);
+      }
+      &:checked + .slider:before {
+        -webkit-transform: translateX(32px);
+        -ms-transform: translateX(32px);
+        transform: translateX(32px);
+        background-color: var(--color-text-heading);
+      }
+    }
+    .slider {
+      position: absolute;
+      inset: 0;
+      /* top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; */
+      background-color: var(--color-input-base);
+      outline: 1px solid var(--color-input-stroke);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      &:before {
+        position: absolute;
+        content: "";
+        height: 24px;
+        width: 24px;
+        left: 4px;
+        bottom: 4px;
+        background-color: var(--color-input-stroke);
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      &.round {
+        border-radius: 34px;
+        &.round:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

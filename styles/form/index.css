@@ -50,4 +50,16 @@ main#form-content {
     border: none;
     margin-bottom: 48px;
   }
+
+  #others {
+    display: flex;
+
+    label {
+      color: var(--color-text-body);
+    }
+
+    #style {
+      width: 176px;
+    }
+  }
 }
