@@ -70,3 +70,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.divider {
+  height: 1px;
+  background-color: var(--color-input-stroke);
+}

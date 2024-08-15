@@ -30,6 +30,14 @@ select {
   &::placeholder {
     color: var(--color-input-placeholder);
   }
+
+  &:invalid {
+    outline: 1px solid var(--color-feedback-danger);
+  }
+
+  &:valid + .error {
+    display: none;
+  }
 }
 
 input[type="datetime-local"] {
@@ -82,4 +90,14 @@ input[type="datetime-local"] {
       max-width: 234px;
     }
   }
+}
+
+.error {
+  font: var(--text-body-xs);
+  color: var(--color-feedback-danger);
+  padding-top: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
