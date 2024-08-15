@@ -7,7 +7,7 @@ main#form-content {
 
   overflow: auto; /* aqui pode ter barra de rolagem */
 
-  padding: 80px 130px 80px 130px;
+  padding-block: 80px;
 
   &::-webkit-scrollbar {
     width: 10px;
