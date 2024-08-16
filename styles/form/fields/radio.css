@@ -1,4 +1,5 @@
 .segmented-control {
+  height: 48px;
   outline: 1px solid var(--color-input-stroke);
   border-radius: 8px;
   background-color: var(--color-input-base);
@@ -51,6 +52,10 @@
           brightness(104%) contrast(101%);
       }
     }
+  }
+  &:hover,
+  &:has(input:focus) {
+    outline-color: var(--color-brand-light);
   }
 }
 
