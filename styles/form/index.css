@@ -49,6 +49,10 @@ main#form-content {
   fieldset {
     border: none;
     margin-bottom: 48px;
+
+    &#checklist {
+      margin-top: 48px;
+    }
   }
 
   #others {

@@ -1,0 +1,63 @@
+label.checkbox-wrapper {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  height: 20px;
+
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  input[type="checkbox"] {
+    position: absolute;
+    all: unset;
+    &:checked ~ .checkmark:after {
+      /* Show the checkmark when checked */
+      display: block;
+      outline-color: var(--color-brand-light);
+    }
+    &:checked ~ .checkmark {
+      outline-color: var(--color-brand-light);
+    }
+  }
+  .checkmark {
+    /* Create a custom checkbox */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-input-base);
+    border-radius: 4px;
+    outline: 1px solid var(--color-input-stroke);
+
+    &:after {
+      /* Create the checkmark/indicator (hidden when not checked) */
+      content: "";
+      position: absolute;
+      display: none;
+
+      /* Style the checkmark/indicator */
+      left: 7px;
+      top: 3px;
+      width: 5px;
+      height: 10px;
+      border: solid var(--color-brand-light);
+      border-width: 0 1px 1px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  &:hover input ~ .checkmark {
+    outline-color: var(--color-brand-light);
+  }
+
+  a {
+    color: var(--color-brand-light);
+    font: var(--text-body-sm-semibold);
+    display: inline-block;
+    padding-inline: 5px;
+  }
+}
